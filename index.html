@@ -145,7 +145,7 @@
       left: 522px;
       background-image: url("/star.png");
     }
-    .lotto .button{
+    .lotto > .button{
       display: flex;
       flex-direction: row;
       justify-content: center;
@@ -160,10 +160,82 @@
     .button .text{
       width: 92px;
       height: 19px;
+      text-align: center;
       font-size: 16px;
       font-weight: 700;
       font-family: "Noto Sans KR";
       color: #ffffff;
+    }
+    .lotto_buy{
+      width: 531px;
+      height: 188px;
+      top: 300px;
+      left: 20px;
+      border-top: 1px solid #EEEEEE;
+    }
+    .lotto_buy > .text{
+      width: 113.22px;
+      height: 20px;
+      top: 23px;
+      left: 0;
+      font-size: 18px;
+      font-weight: 700;
+      font-family: "Roboto";
+      color: #000000;
+      line-height: 23px;
+    }
+    .lotto_buy .input{
+      width: 531px;
+      height: 37px;
+      line-height: 37px;
+      top: 60px;
+      left: 0;
+    }
+    .lotto_buy label{
+      width: 73.2px;
+      height: 17px;
+      font-size: 16px;
+      font-weight: 400;
+      font-family: "Noto Sans KR";
+      line-height: 17px;
+      color: #000000;
+    }
+    .lotto_buy input{
+      box-sizing: border-box;
+      padding-left: 9px;
+      width: 451px;
+      height: 37px;
+      top: 0;
+      left: 80px;
+      background-color: #FFFFFF;
+      border-radius: 4px;
+      border: 1px solid #DDDDDD;
+      font-size: 13.3px;
+      font-weight: 400;
+      font-family: "Roboto";
+      color: #8B8B8B;
+      ;
+    }
+    .input+.text{
+      width: 234.24px;
+      height: 17px;
+      line-height: 17px;
+      top: 108px;
+      font-size: 16px;
+      font-weight: 400;
+      font-family: "Noto Sans KR";
+    }
+    .lotto_buy > .button{
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      width: 531px;
+      height: 40px;
+      top: 148px;
+      left: 0;
+      border-radius: 5px;
+      background-color: #4B89DC;
     }
   </style>
 </head>
@@ -207,6 +279,21 @@
     <div class="star abs"></div>
     <div class="button abs">
       <div class="text">번호 생성하기</div>
+    </div>
+    <div class="lotto_buy abs">
+      <div class="text abs">
+        로또 구매하기
+      </div>
+      <div class="input abs">
+        <label for="count_id">구매 수량: </label>
+        <input class="abs" type="text" id="count_id" name="count" value="구매 수량을 입력해주세요">
+      </div>
+      <div class="text abs">
+        총 금액: 1,000원 (1장당 1,000원)
+      </div>
+      <div class="button abs">
+        <div class="text">구매하기</div>
+      </div>
     </div>
   </div>
 </body>
