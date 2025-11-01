@@ -1,68 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>비기너 로또</title>
   <link rel="stylesheet" href="./css/style.css">
   </head>
-<body>
-  <div class="Header">
-    <div class="text">
+<body class="flex">
+  <div class="Header flex">
+    <div class="font">
       비기너 로또
     </div>
   </div>
-  <div class="lotto abs">
-    <div class="title">
-      <h1>로또 번호 생성기</h1>
-      <h2>행운의 번호를 생성해보세요!</h2>
+  <div class="lotto flex">
+    <div class="title flex">
+      <h1 class="font">로또 번호 생성기</h1>
+      <h2 class="font">행운의 번호를 생성해보세요!</h2>
     </div>
-    <div class="text abs">
+    <div class="text">
       당첨 번호 생성
     </div>
-    <div class="frame abs">
-      <div class="ball" id="first">
-        ?
-      </div>
-      <div class="ball" id="second">
-        ?
-      </div>
-      <div class="ball" id="third">
-        ?
-      </div>
-      <div class="ball" id="fourth">
-        ?
-      </div>
-      <div class="ball" id="fifth">
-        ?
-      </div>
-      <div class="ball" id="sixth">
-        ?
-      </div>
-      <div class="ball" id="seventh">
-        ?
+    <div class="frame flex">
+      <div class="ball font flex" id="first">?</div>
+      <div class="ball font flex" id="second">?</div>
+      <div class="ball font flex" id="third">?</div>
+      <div class="ball font flex" id="fourth">?</div>
+      <div class="ball font flex" id="fifth">?</div>
+      <div class="ball font flex" id="sixth">?</div>
+      <div class="ball font flex" id="seventh">?
+        <img class="star flex" src="./image/star.png" alt="star">
       </div>
     </div>
-    <div class="star abs"></div>
-    <div class="button abs">
-      <div class="text">번호 생성하기</div>
-    </div>
-    <div class="lotto_buy abs">
-      <div class="text abs">
-        로또 구매하기
-      </div>
-      <div class="input abs">
+    <button class="font flex">번호 생성하기</button>
+    <div class="lotto_buy flex text">
+      로또 구매하기
+      <div class="buy_input flex">
         <label for="count_id">구매 수량: </label>
-        <input class="abs" type="text" id="count_id" name="count" value="구매 수량을 입력해주세요">
-      </div>
-      <div class="text abs">
-        총 금액: 1,000원 (1장당 1,000원)
-      </div>
-      <div class="button abs">
-        <div class="text">구매하기</div>
+        <input class="flex" type="text" id="count_id" name="count" value="구매 수량을 입력해주세요">
       </div>
     </div>
+    <div class="text flex" id="result">
+      총 금액: 1,000원 (1장당 1,000원)
+    </div>
+    <button class="font flex">구매하기</button>
   </div>
 </body>
 </html>
