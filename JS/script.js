@@ -153,14 +153,14 @@ function showResultModal(){
   total.textContent = "당신의 당첨금은 총 xxxx원 입니다.";
 
 
-  for (let i=0;i<myNumbersList.length;i++){
-    var match3 = 0;
-    var match4 = 0;
-    var match5 = 0;
-    var match5b = 0;
-    var match6 = 0;
-    var totalprize = 0;
+  var match3 = 0;
+  var match4 = 0;
+  var match5 = 0;
+  var match5b = 0;
+  var match6 = 0;
+  var totalprize = 0;
 
+  for (let i=0;i<myNumbersList.length;i++){
     let nums = myNumbersList[i];
     let mainNums = winningNumbers.slice(0,6);
     let bonusNum = winningNumbers[6];
@@ -187,18 +187,23 @@ function showResultModal(){
     }
 
     if(matchCount===6){
+      console.log("6번 당첩 = "+i+"번째 줄");
       match6++;
       totalprize += prize[6];
     } else if(matchCount === 5&&hasBonus) {
+      console.log("5번+보너스 당첩 = "+i+"번째 줄");
       match5b++;
       totalprize += prize["5b"];
     } else if(matchCount===5){
+      console.log("5번 당첩 = "+i+"번째 줄");
       match5++;
       totalprize += prize[5];
     } else if(matchCount===4){
+      console.log("4번 당첩 = "+i+"번째 줄");
       match4++;
       totalprize += prize[4];
     } else if(matchCount===3){
+      console.log("3번 당첩 = "+i+"번째 줄");
       match3++;
       totalprize += prize[3];
     }
