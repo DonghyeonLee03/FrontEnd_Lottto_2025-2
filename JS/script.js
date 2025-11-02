@@ -47,6 +47,7 @@ window.addEventListener('keydown', function(e){
 function CreateNUM(){
   if(push == 1||result.childElementCount > 0){
     result.innerHTML = '';
+    listArea.innerHTML = '';
     push = 0;
     count.value = '구매 수량을 입력해주세요';
     money.textContent = '총 금액: 1,000원 (1장당 1,000원)';
@@ -153,19 +154,27 @@ function showResultModal(){
 
 
   for (let i=0;i<myNumbersList.length;i++){
-    let match3 = 0;
-    let match4 = 0;
-    let match5 = 0;
-    let match5b = 0;
-    let match6 = 0;
-    let total = 0;
+    var match3 = 0;
+    var match4 = 0;
+    var match5 = 0;
+    var match5b = 0;
+    var match6 = 0;
+    var totalprize = 0;
 
     let nums = myNumbersList[i];
     let mainNums = winningNumbers.slice(0,6);
     let bonusNum = winningNumbers[6];
-
+    
     let matchCount = 0;
     let hasBonus = false;
+    
+    let prize = {
+      6: 200000000,
+      "5b": 15000000,
+      5: 150000,
+      4: 50000,
+      3: 5000,
+    };
 
     for (let j=0;j<6;j++){
       if(mainNums.includes(nums[j])){
@@ -179,34 +188,26 @@ function showResultModal(){
 
     if(matchCount===6){
       match6++;
-      total += prize[6];
+      totalprize += prize[6];
     } else if(matchCount === 5&&hasBonus) {
       match5b++;
-      total += prize["5b"];
+      totalprize += prize["5b"];
     } else if(matchCount===5){
       match5++;
-      total += prize[5];
+      totalprize += prize[5];
     } else if(matchCount===4){
       match4++;
-      total += prize[4];
+      totalprize += prize[4];
     } else if(matchCount===3){
       match3++;
-      total += prize[3];
+      totalprize += prize[3];
     }
   }
-
-  const prize = {
-    6: 200000000,
-    "5b": 15000000,
-    5: 150000,
-    4: 50000,
-    3: 5000,
-  };
 
   div3.textContent = match3 + "개";
   div4.textContent = match4 + "개";
   div5.textContent = match5 + "개";
   div5b.textContent = match5b + "개";
   div6.textContent = match6 + "개";
-  total.textContent = "당신의 당첨금은 총 "+ total+"원 입니다.";
+  total.textContent = "당신의 당첨금은 총 "+ totalprize+"원 입니다.";
 }
