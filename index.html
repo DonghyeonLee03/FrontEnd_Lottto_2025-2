@@ -7,6 +7,43 @@
   <link rel="stylesheet" href="./css/style.css">
   </head>
 <body class="flex">
+  <div id="resultModal" class="modal flex">
+    <div id="modalFrame" class="modalFrame flex">
+      <div class="modalHeader">당첨 결과</div>
+      <div class="flex listHeader">
+        <div>일치 갯수</div>
+        <div>당첨금</div>
+        <div>당첨 갯수</div>
+      </div>
+      <div class="flex list">
+        <div>3개</div>
+        <div>5,000원</div>
+        <div id="num3">n개</div>
+      </div>
+      <div class="flex list">
+        <div>4개</div>
+        <div>50,000원</div>
+        <div id="num4">n개</div>
+      </div>
+      <div class="flex list">
+        <div>5개</div>
+        <div>150,000원</div>
+        <div id="num5">n개</div>
+      </div>
+      <div class="flex list">
+        <div>5개 + 보너스</div>
+        <div>15,000,000원</div>
+        <div id="num5b">n개</div>
+      </div>
+      <div class="flex list">
+        <div>6개</div>
+        <div>200,000,000원</div>
+        <div id="num6">n개</div>
+      </div>
+      <div class="modalResult" id="total">당신의 당첨금은 총 xxxx원 입니다.</div>
+      <button class="font" id="modalClose">닫기</button>
+    </div>
+  </div>
   <div class="Header flex">
     <div class="font">
       비기너 로또
@@ -44,5 +81,6 @@
     </div>
     <button class="font flex">구매하기</button>
   </div>
+  <script src="./JS/script.js" type="text/Javascript"></script>
 </body>
 </html>
