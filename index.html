@@ -58,30 +58,30 @@
       당첨 번호 생성
     </div>
     <div class="frame flex">
-      <div class="ball font flex" id="first">?</div>
-      <div class="ball font flex" id="second">?</div>
-      <div class="ball font flex" id="third">?</div>
-      <div class="ball font flex" id="fourth">?</div>
-      <div class="ball font flex" id="fifth">?</div>
-      <div class="ball font flex" id="sixth">?</div>
-      <div class="ball font flex" id="seventh">?
+      <div class="ball font flex" id="ball1">?</div>
+      <div class="ball font flex" id="ball2">?</div>
+      <div class="ball font flex" id="ball3">?</div>
+      <div class="ball font flex" id="ball4">?</div>
+      <div class="ball font flex" id="ball5">?</div>
+      <div class="ball font flex" id="ball6">?</div>
+      <div class="ball font flex" id="ball7">?
         <img class="star flex" src="./image/star.png" alt="star">
       </div>
     </div>
-    <button class="font flex">번호 생성하기</button>
+    <button id="createNum" class="font flex">번호 생성하기</button>
     <div class="lotto_buy flex text">
       로또 구매하기
       <div class="buy_input flex">
-        <label for="count_id">구매 수량: </label>
-        <input placeholder="구매 수량을 입력해주세요" class="flex" type="text" id="count_id" name="count">
+        <label for="countId">구매 수량: </label>
+        <input placeholder="구매 수량을 입력해주세요" class="flex" type="text" id="countId" name="count">
       </div>
     </div>
     <div class="text flex" id="result">
-      총 금액: 1,000원 (1장당 1,000원)
+      총 금액: 0원 (1장당 1,000원)
     </div>
-    <button class="font flex">구매하기</button>
+    <button id="buyLotto" class="font flex">구매하기</button>
   </div>
-  <button class="reset">초기화</button>
-  <script src="./JS/script.js" type="text/Javascript"></script>
+  <button id="reset" class="reset">초기화</button>
+  <script src="./JS/app.js" type="module"></script>
 </body>
 </html>

@@ -85,25 +85,25 @@ h2{
   font-weight: 400;
   font-size: 20px;
 }
-#first{
+#ball1{
   background-color: #FBC400;
 }
-#second{
+#ball2{
   background-color: #69C8F2;
 }
-#third{
+#ball3{
   background-color: #FF7272;
 }
-#fourth{
+#ball4{
   background-color: #AAAAAA;
 }
-#fifth{
+#ball5{
   background-color: #B0D840;
 }
-#sixth{
+#ball6{
   background-color: #B49FFF;
 }
-#seventh{
+#ball7{
   background-color: #FF7F48;
   position: relative;
 }
