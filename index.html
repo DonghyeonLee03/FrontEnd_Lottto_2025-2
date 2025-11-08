@@ -6,7 +6,7 @@
   <title>비기너 로또</title>
   <link rel="stylesheet" href="./css/style.css">
   </head>
-<body class="flex">
+<body>
   <div id="resultModal" class="modal flex">
     <div id="modalFrame" class="modalFrame flex">
       <div class="modalHeader">당첨 결과</div>
@@ -73,7 +73,7 @@
       로또 구매하기
       <div class="buy_input flex">
         <label for="count_id">구매 수량: </label>
-        <input class="flex" type="text" id="count_id" name="count" value="구매 수량을 입력해주세요">
+        <input placeholder="구매 수량을 입력해주세요" class="flex" type="text" id="count_id" name="count">
       </div>
     </div>
     <div class="text flex" id="result">
@@ -81,6 +81,7 @@
     </div>
     <button class="font flex">구매하기</button>
   </div>
+  <button class="reset">초기화</button>
   <script src="./JS/script.js" type="text/Javascript"></script>
 </body>
 </html>
